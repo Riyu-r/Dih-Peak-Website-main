@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DihVents</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="header-container">
+                <h1>DihVents</h1>
+                <header class="search-header">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-header__input" 
+                        placeholder="Search here..." 
+                        aria-label="Search"
+                    />
+                    <button 
+                        class="search-header__button" 
+                        aria-label="Search Button" 
+                        onclick="searchEvent()"
+                    >
+                        <svg class="search-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M10 2a8 8 0 105.293 14.707l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+                        </svg>
+                    </button>
+                </header>
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#events">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+        <video autoplay muted loop>
+            <source src="banner.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="banner-content">
+            <h2>Discover Events in APC</h2>
+            <p>Find events that match your interests and passions.</p>
+            <button onclick="location.href='#events';">Explore Events</button>
+        </div>
+    </div>
+    <div class="slider">
+        <button class="slider-arrow left-arrow" onclick="moveLeft()">&#8249;</button>
+        <div class="list">
+            <div class="item" style="text-align: left; margin-left: 50px;">
+                <a href="Cosplay Event.html">
+                    <img src="Cosplay Event.png" alt="Cosplay Event" style="width: 400px; height: auto; text-align: left;">
+                </a>
+            </div>
+            <div class="item" style="text-align: left;">
+                <a href="Valentines Event.html">
+                    <img src="Valentines Event.png" alt="Valentines" style="width: 400px; height: auto; text-align: left;">
+                </a>
+            </div>
+            <div class="item" style="text-align: left;">
+                <a href="Spelling Bee Contest.html">
+                    <img src="Spelling Bee Contest.png" alt="Spelling Bee" style="width: 400px; height: auto; text-align: left;">
+                </a>
+            </div>
+            <div class="item" style="text-align: left;">
+                <a href="Talent Show Event.html">
+                    <img src="Talent Show.png" alt="Talents" style="width: 400px; height: auto; text-align: left;">
+                </a>
+            </div>
+            <div class="item" style="text-align: left;">
+                <a href="Game Event.html">
+                    <img src="Game Event.png" alt="Game" style="width: 400px; height: auto; text-align: left;">
+                </a>
+            </div>
+            <div class="item" style="text-align: left;">
+                <a href="Photo Walk.html">
+                    <img src="Photo Walk.png" alt="Photos" style="width: 400px; height: auto; text-align: left;">
+                </a>
+            </div>
+        </div>
+        <button class="slider-arrow right-arrow" onclick="moveRight()">&#8250;</button>
+    </div>
+    <script>
+        let currentIndex = 0;
+
+        function moveLeft() {
+            const sliderList = document.querySelector('.slider .list');
+            const items = document.querySelectorAll('.slider .list .item');
+            const itemWidth = items[0].offsetWidth;
+
+            if (currentIndex > 0) {
+                currentIndex--;
+                sliderList.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+            }
+        }
+
+        function moveRight() {
+            const sliderList = document.querySelector('.slider .list');
+            const items = document.querySelectorAll('.slider .list .item');
+            const itemWidth = items[0].offsetWidth;
+
+            if (currentIndex < items.length - 1) {
+                currentIndex++;
+                sliderList.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+            }
+        }
+
+        const events = {
+            "cosplay event": "Cosplay Event.html",
+            "valentines event": "Valentines Event.html",
+            "spelling bee contest": "Spelling Bee Contest.html",
+            "talent show event": "Talent Show Event.html",
+            "game event": "Game Event.html",
+            "photo walk": "Photo Walk.html"
+        };
+
+        function searchEvent() {
+            const searchInput = document.getElementById("search-input").value.toLowerCase().trim();
+            let found = false;
+
+            for (const [eventName, eventLink] of Object.entries(events)) {
+                if (eventName.includes(searchInput)) {
+                    // Redirect to the event page if a match is found
+                    window.location.href = eventLink;
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                // Display an alert if no match is found
+                alert("Sorry, it seems that the event you are looking for does not exist.");
+            }
+        }
+    </script>
+</body>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Our Purpose</h3>
+            <p>
+                DihVents is your ultimate platform for discovering exciting events that match your interests. 
+                From music festivals to food fairs, we bring you closer to unforgettable experiences.
+            </p>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>cjrodas@student.apc.edu.ph</p>
+            <p>rmlitrero@student.apc.edu.ph</p>
+            <div class="footer-socials">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 DihVents. All rights reserved.</p>
+    </div>
+</footer>
+</html>

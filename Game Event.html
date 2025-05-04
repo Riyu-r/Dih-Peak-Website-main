@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Event</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="header-container">
+                <a href="home.html" style="text-decoration: none; color: inherit;">
+                    <h1>DihVents</h1>
+                </a>
+                <header class="search-header">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-header__input" 
+                        placeholder="Search here..." 
+                        aria-label="Search"
+                    />
+                    <button 
+                        class="search-header__button" 
+                        aria-label="Search Button" 
+                        onclick="searchEvent()"
+                    >
+                        <svg class="search-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M10 2a8 8 0 105.293 14.707l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+                        </svg>
+                    </button>
+                </header>
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#events">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+        <img src="Game Event.png" alt="Game Event" class="banner-image" style="width: 100%; height: auto;">
+        <div class="banner-content">
+            <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 2.5em;">APC GAME NIGHT</h2>
+            <p style="color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); font-size: 1.2em;">
+                Join us for an exciting night of games and fun!
+            </p>
+        </div>
+    </div>
+    <div class="event-details">
+        <h3 style="margin-top: 10px; font-family: 'Arial', sans-serif; color: #001f3f;">November 16, 2025</h3>
+        <h1 style="font-size: 2em; font-weight: bold; font-family: 'Arial', sans-serif; color: #001f3f;">CTRL+PLAY: APC GameFest 2025</h1>
+        <p style="margin-top: 10px; font-size: 1em; font-family: 'Arial', sans-serif; color: #001f3f;">
+            Ready your mouse, controllers, and trash talk — <strong>CTRL+PLAY</strong> is APC’s first mini gaming con! Play in tourneys, try retro consoles, and hang out with fellow gaming geeks. Plus, win big in our 5v5 e-sports face-off.
+        </p>
+        <div class="event-host" style="margin-top: 20px; font-family: 'Arial', sans-serif; color: #001f3f;">
+            <p>By <strong>DihVents</strong></p>
+        </div>
+    </div>
+    <div class="event-info" style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-family: 'Arial', sans-serif;">
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #6c4ed9; font-size: 1.5em; margin-bottom: 10px;">📅 Date & Time</h2>
+            <p style="color: #333; font-size: 1.1em;">November 16, 2025 | 10:00 AM – 6:00 PM</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #5cb85c; font-size: 1.5em; margin-bottom: 10px;">📍 Venue</h2>
+            <p style="color: #333; font-size: 1.1em;">APC iTech Labs + Lounge Area</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #f0ad4e; font-size: 1.5em; margin-bottom: 10px;">👥 Who Can Join</h2>
+            <p style="color: #333; font-size: 1.1em;">APC gamers & gaming clubs</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #0275d8; font-size: 1.5em; margin-bottom: 10px;">📝 Registration</h2>
+            <p style="color: #333; font-size: 1.1em;">Sign Up (Deadline: November 5)</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #d9534f; font-size: 1.5em; margin-bottom: 10px;">🎮 Game Lineup</h2>
+            <ul style="color: #333; font-size: 1.1em; line-height: 1.6;">
+                <li>Valorant (5v5 Tourney)</li>
+                <li>Just Dance Station</li>
+                <li>Classic Mario Kart</li>
+                <li>Mobile Legends</li>
+            </ul>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #6c757d; font-size: 1.5em; margin-bottom: 10px;">🏆 Prizes</h2>
+            <ul style="color: #333; font-size: 1.1em; line-height: 1.6;">
+                <li>Valorant Champs — ₱6,000</li>
+                <li>Best Cosplay (Gaming Character) — ₱2,000</li>
+                <li>MVP — ₱1,000</li>
+            </ul>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #6c757d; font-size: 1.5em; margin-bottom: 10px;">📋 Requirements</h2>
+            <ul style="color: #333; font-size: 1.1em; line-height: 1.6;">
+                <li>Team registration for group games</li>
+                <li>Bring own gear (if needed)</li>
+            </ul>
+        </div>
+        <div>
+            <h2 style="color: #0275d8; font-size: 1.5em; margin-bottom: 10px;">📧 Contact</h2>
+            <p style="color: #333; font-size: 1.1em;">ctrlplay@dihvents.apc.edu.ph</p>
+        </div>
+    </div>
+    <script>
+        const events = {
+            "cosplay event": "Cosplay Event.html",
+            "valentines event": "Valentines Event.html",
+            "spelling bee contest": "Spelling Bee Contest.html",
+            "talent show event": "Talent Show Event.html",
+            "game event": "Game Event.html",
+            "photo walk": "Photo Walk.html"
+        };
+
+        function searchEvent() {
+            const searchInput = document.getElementById("search-input").value.toLowerCase().trim();
+            let found = false;
+
+            for (const [eventName, eventLink] of Object.entries(events)) {
+                if (eventName.includes(searchInput)) {
+                    window.location.href = eventLink;
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                alert("Sorry, it seems that the event you are looking for does not exist.");
+            }
+        }
+    </script>
+</body>
+</html>
