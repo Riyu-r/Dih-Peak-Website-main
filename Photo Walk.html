@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Walk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="header-container">
+                <a href="home.html" style="text-decoration: none; color: inherit;">
+                    <h1>DihVents</h1>
+                </a>
+                <header class="search-header">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-header__input" 
+                        placeholder="Search here..." 
+                        aria-label="Search"
+                    />
+                    <button 
+                        class="search-header__button" 
+                        aria-label="Search Button" 
+                        onclick="searchEvent()"
+                    >
+                        <svg class="search-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M10 2a8 8 0 105.293 14.707l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+                        </svg>
+                    </button>
+                </header>
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="explore.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Loading Animation -->
+    <div id="loading-screen">
+      <div id="ghost">
+        <div id="red">
+          <div id="pupil"></div>
+          <div id="pupil1"></div>
+          <div id="eye"></div>
+          <div id="eye1"></div>
+          <div id="top0"></div>
+          <div id="top1"></div>
+          <div id="top2"></div>
+          <div id="top3"></div>
+          <div id="top4"></div>
+          <div id="st0"></div>
+          <div id="st1"></div>
+          <div id="st2"></div>
+          <div id="st3"></div>
+          <div id="st4"></div>
+          <div id="st5"></div>
+          <div id="an1"></div>
+          <div id="an2"></div>
+          <div id="an3"></div>
+          <div id="an4"></div>
+          <div id="an5"></div>
+          <div id="an6"></div>
+          <div id="an7"></div>
+          <div id="an8"></div>
+          <div id="an9"></div>
+          <div id="an10"></div>
+          <div id="an11"></div>
+          <div id="an12"></div>
+          <div id="an13"></div>
+          <div id="an14"></div>
+          <div id="an15"></div>
+          <div id="an16"></div>
+          <div id="an17"></div>
+          <div id="an18"></div>
+        </div>
+        <div id="shadow"></div>
+      </div>
+    </div>
+    <div class="banner">
+        <img src="Photo Walk.png" alt="Photo Walk" class="banner-image" style="width: 100%; height: auto;">
+        <div class="banner-content">
+            <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 2.5em;">APC PHOTO WALK</h2>
+            <p style="color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); font-size: 1.2em;">
+                Capture the beauty of APC through your lens!
+            </p>
+        </div>
+    </div>
+    <div class="event-details">
+        <h3 style="margin-top: 10px; font-family: 'Arial', sans-serif; color: #001f3f;">August 17, 2025</h3>
+        <h1 style="font-size: 2em; font-weight: bold; font-family: 'Arial', sans-serif; color: #001f3f;">ShotZone: APC PhotoWalk + Exhibit</h1>
+        <p style="margin-top: 10px; font-size: 1em; font-family: 'Arial', sans-serif; color: #001f3f;">
+            Photographers and visual creatives unite! <strong>ShotZone</strong> is a photowalk + pop-up gallery event where you get to capture stunning moments around campus, then showcase your best photos in an afternoon exhibit.
+        </p>
+        <div class="event-host" style="margin-top: 20px; font-family: 'Arial', sans-serif; color: #001f3f;">
+            <p>By <strong>DihVents</strong></p>
+        </div>
+    </div>
+    <div class="event-info" style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-family: 'Arial', sans-serif;">
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #6c4ed9; font-size: 1.5em; margin-bottom: 10px;">📅 Date & Time</h2>
+            <p style="color: #333; font-size: 1.1em;">8:00 AM – 12:00 PM (Walk) | 3:00 PM – 6:00 PM (Exhibit)</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #5cb85c; font-size: 1.5em; margin-bottom: 10px;">📍 Venue</h2>
+            <p style="color: #333; font-size: 1.1em;">Entire Campus + Exhibit Hall</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #f0ad4e; font-size: 1.5em; margin-bottom: 10px;">👥 Who Can Join</h2>
+            <p style="color: #333; font-size: 1.1em;">All APC students</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #0275d8; font-size: 1.5em; margin-bottom: 10px;">📝 Registration</h2>
+            <p style="color: #333; font-size: 1.1em;">Join the Walk (Closes: August 10)</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #d9534f; font-size: 1.5em; margin-bottom: 10px;">🏆 Categories</h2>
+            <ul style="color: #333; font-size: 1.1em; line-height: 1.6;">
+                <li>Best Portrait</li>
+                <li>Best Campus Shot</li>
+                <li>Most Creative</li>
+            </ul>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #6c757d; font-size: 1.5em; margin-bottom: 10px;">🔔 Reminders</h2>
+            <ul style="color: #333; font-size: 1.1em; line-height: 1.6;">
+                <li>DSLR, mirrorless, or phone cameras welcome</li>
+                <li>Top entries will be printed & exhibited</li>
+            </ul>
+        </div>
+        <div>
+            <h2 style="color: #0275d8; font-size: 1.5em; margin-bottom: 10px;">📧 Contact</h2>
+            <p style="color: #333; font-size: 1.1em;">shotzone@dihvents.apc.edu.ph</p>
+        </div>
+    </div>
+    <script>
+        const events = {
+            "cosplay event": "Cosplay Event.html",
+            "valentines event": "Valentines Event.html",
+            "spelling bee contest": "Spelling Bee Contest.html",
+            "talent show event": "Talent Show Event.html",
+            "game event": "Game Event.html",
+            "photo walk": "Photo Walk.html"
+        };
+
+        function searchEvent() {
+            const searchInput = document.getElementById("search-input").value.toLowerCase().trim();
+            let found = false;
+
+            for (const [eventName, eventLink] of Object.entries(events)) {
+                if (eventName.includes(searchInput)) {
+                    window.location.href = eventLink;
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                alert("Sorry, it seems that the event you are looking for does not exist.");
+            }
+        }
+    </script>
+</body>
+</html>
