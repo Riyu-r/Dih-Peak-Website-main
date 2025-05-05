@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Creators</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .creator-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+
+        .creator-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .creator-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .creator-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .creator-info {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .creator-info h1 {
+            font-size: 2rem;
+            color: #1a1a1a;
+        }
+
+        .creator-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .next-arrow {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .next-arrow:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+   <!-- Navbar -->
+   <header>
+    <nav class="navbar">
+        <div class="header-container">
+            <a href="home.html" style="text-decoration: none; color: inherit;">
+                <h1>DihVents</h1>
+            </a>
+            <header class="search-header">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    class="search-header__input" 
+                    placeholder="Search here..." 
+                    aria-label="Search"
+                />
+                <button 
+                    class="search-header__button" 
+                    aria-label="Search Button" 
+                    onclick="searchEvent()"
+                >
+                    <svg class="search-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M10 2a8 8 0 105.293 14.707l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+                    </svg>
+                </button>
+            </header>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="explore.html">Events</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Creator Sections -->
+    <div class="creator-section" id="creator1">
+        <div class="creator-image">
+            <img src="charles.jpg" alt="Charles Landon Rodas">
+        </div>
+        <div class="creator-info">
+            <h1>Charles Landon Rodas</h1>
+            <p><strong>Role:</strong> Lead Developer</p>
+            <p>Charles specializes in backend development and ensures the platform runs smoothly.</p>
+            <a href="#creator2" class="next-arrow">Next Creator →</a>
+        </div>
+    </div>
+
+    <div class="creator-section" id="creator2">
+        <div class="creator-image">
+            <img src="ron.jpg" alt="Ron Aiden litrero">
+        </div>
+        <div class="creator-info">
+            <h1>Ron Aiden litrero</h1>
+            <p><strong>Role:</strong> UI/UX Designer</p>
+            <p>Ron focuses on creating intuitive and visually appealing user interfaces.</p>
+            <a href="#creator3" class="next-arrow">Next Creator →</a>
+        </div>
+    </div>
+
+    <div class="creator-section" id="creator3">
+        <div class="creator-image">
+            <img src="jp.png" alt="John Paul DIHlantar">
+        </div>
+        <div class="creator-info">
+            <h1>John Paul DIHlantar</h1>
+            <p><strong>Role:</strong> Content Strategist</p>
+            <p>JP crafts engaging content and ensures the platform's voice is consistent.</p>
+            <a href="#creator4" class="next-arrow">Next Creator →</a>
+        </div>
+    </div>
+
+    <div class="creator-section" id="creator4">
+        <div class="creator-image">
+            <img src="giyo.jpg" alt="Giyo Misael Martinez">
+        </div>
+        <div class="creator-info">
+            <h1>Giyo Misael Martinez</h1>
+            <p><strong>Role:</strong> Marketing Specialist</p>
+            <p>Giyo handles marketing strategies and ensures the platform reaches its audience.</p>
+            <a href="#creator1" class="next-arrow">Back to First Creator →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DihVents. All rights reserved.</p>
+    </footer>
+
+    <!-- GSAP Animations -->
+    <script>
+        // Animate each creator section
+        gsap.from(".creator-section", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.3,
+            ease: "power2.out"
+        });
+
+        // Animate the header
+        gsap.from("header", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "power2.out"
+        });
+
+        // Animate the footer
+        gsap.from("footer", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 1.5,
+            ease: "power2.out"
+        });
+    </script>
+</body>
+</html>

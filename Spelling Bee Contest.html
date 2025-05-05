@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spelling Bee Contest</title>
     <link rel="stylesheet" href="styles.css">
+       
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -39,103 +42,128 @@
             </ul>
         </nav>
     </header>
-    <div class="banner">
-        <img src="Spelling Bee Contest.png" alt="Spelling Bee Contest" class="banner-image" style="width: 100%; height: auto;">
-        <div class="banner-content">
-            <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 2.5em;">APC SPELLING BEE</h2>
-            <p style="color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); font-size: 1.2em;">
-                Test your spelling skills and compete for the top spot!
+
+    <!-- Bootstrap Carousel -->
+    <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- First Slide -->
+            <div class="carousel-item active">
+                <img src="https://imengine.public.prod.rgb.navigacloud.com/?uuid=adc9cfaf-6a4e-5fa2-b595-e4f11024b521&type=primary&function=cover&source=false&width=800" class="d-block w-100 img-fluid" alt="Spelling Bee Contest">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-white fw-bold">APC SPELLING BEE</h2>
+                    <p>Test your spelling skills and compete for the top spot!</p>
+                </div>
+            </div>
+            <!-- Second Slide -->
+            <div class="carousel-item">
+                <img src="https://cdn.britannica.com/94/177094-131-D91F6A96/Spelling-bee-Nathan-J-Marcisz-competition-word-June-3-2010.jpg" class="d-block w-100 img-fluid" alt="Spelling Bee Stage">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-white fw-bold">Buzz Battle</h2>
+                    <p>Show off your word power in an exciting elimination-style contest!</p>
+                </div>
+            </div>
+            <!-- Third Slide -->
+            <div class="carousel-item">
+                <img src="https://static.independent.co.uk/2024/07/03/15/newFile-2.jpg" class="d-block w-100 img-fluid" alt="Spelling Bee Prizes">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-white fw-bold">Win Big</h2>
+                    <p>Compete for cash prizes, medals, and glory!</p>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Event Details -->
+    <div class="container my-5">
+        <div class="text-center mb-4">
+            <h3 class="text-primary">July 10, 2025</h3>
+            <h1 class="fw-bold">Buzz Battle: APC’s Ultimate Spelling Bee</h1>
+            <p class="lead">
+                Ready to show off your word power? <strong>Buzz Battle</strong> is APC’s ultimate spelling showdown! Compete for big prizes and glory in an exciting elimination-style contest.
             </p>
+            <p><strong>By DihVents</strong></p>
+        </div>
+
+        <!-- Event Info Cards -->
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">📅 Date & Time</h5>
+                        <p class="card-text">July 10, 2025 | 10:00 AM – 1:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">📍 Venue</h5>
+                        <p class="card-text">Multipurpose Hall</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">👥 Who Can Attend</h5>
+                        <p class="card-text">All enrolled APC students</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">📝 Registration</h5>
+                        <p class="card-text">Join the Bee (Closes: July 1)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">🏆 Prizes</h5>
+                        <ul class="mb-0">
+                            <li>Champion — ₱5,000 + Medal</li>
+                            <li>2nd Place — ₱3,000</li>
+                            <li>3rd Place — ₱2,000</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title text-secondary">📜 Mechanics</h5>
+                        <ul class="mb-0">
+                            <li>Words will be from the Merriam-Webster Collegiate Dictionary</li>
+                            <li>Elimination format: stay sharp, stay standing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">📧 Contact</h5>
+                        <p class="card-text">buzzbattle@dihvents.apc.edu.ph</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="event-details">
-        <h3 style="margin-top: 10px; font-family: 'Arial', sans-serif; color: #001f3f;">July 10, 2025</h3>
-        <h1 style="font-size: 2em; font-weight: bold; font-family: 'Arial', sans-serif; color: #001f3f;">Buzz Battle: APC’s Ultimate Spelling Bee</h1>
-        <p style="margin-top: 10px; font-size: 1em; font-family: 'Arial', sans-serif; color: #001f3f;">
-            Ready to show off your word power? <strong>Buzz Battle</strong> is APC’s ultimate spelling showdown! Compete for big prizes and glory in an exciting elimination-style contest.
-        </p>
-        <div class="event-host" style="margin-top: 20px; font-family: 'Arial', sans-serif; color: #001f3f;">
-            <p>By <strong>DihVents</strong></p>
-        </div>
-    </div>
-    <div class="event-info" style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-family: 'Arial', sans-serif;">
-        <div style="margin-bottom: 20px;">
-            <h2 style="color: #6c4ed9; font-size: 1.5em; margin-bottom: 10px;">📅 Date & Time</h2>
-            <p style="color: #333; font-size: 1.1em;">July 10, 2025 | 10:00AM–1:00PM</p>
-        </div>
-        <div style="margin-bottom: 20px;">
-            <h2 style="color: #5cb85c; font-size: 1.5em; margin-bottom: 10px;">📍 Venue</h2>
-            <p style="color: #333; font-size: 1.1em;">Multipurpose Hall</p>
-        </div>
-        <div style="margin-bottom: 20px;">
-            <h2 style="color: #f0ad4e; font-size: 1.5em; margin-bottom: 10px;">👥 Who Can Attend</h2>
-            <p style="color: #333; font-size: 1.1em;">All enrolled APC students</p>
-        </div>
-        <div style="margin-bottom: 20px;">
-            <h2 style="color: #0275d8; font-size: 1.5em; margin-bottom: 10px;">📝 Registration</h2>
-            <p style="color: #333; font-size: 1.1em;">Join the Bee (Closes: July 1)</p>
-        </div>
-        <div style="margin-bottom: 20px;">
-            <h2 style="color: #d9534f; font-size: 1.5em; margin-bottom: 10px;">🏆 Prizes</h2>
-            <ul style="color: #333; font-size: 1.1em; line-height: 1.6;">
-                <li>Champion — ₱5,000 + Medal</li>
-                <li>2nd Place — ₱3,000</li>
-                <li>3rd Place — ₱2,000</li>
-            </ul>
-        </div>
-        <div style="margin-bottom: 20px;">
-            <h2 style="color: #6c757d; font-size: 1.5em; margin-bottom: 10px;">📜 Mechanics</h2>
-            <ul style="color: #333; font-size: 1.1em; line-height: 1.6;">
-                <li>Words will be from the Merriam-Webster Collegiate Dictionary</li>
-                <li>Elimination format: stay sharp, stay standing</li>
-            </ul>
-        </div>
-        <div>
-            <h2 style="color: #0275d8; font-size: 1.5em; margin-bottom: 10px;">📧 Contact</h2>
-            <p style="color: #333; font-size: 1.1em;">buzzbattle@dihvents.apc.edu.ph</p>
-        </div>
-    </div>
-    <!-- Loading Animation -->
-    <div id="loading-screen">
-      <div id="ghost">
-        <div id="red">
-          <div id="pupil"></div>
-          <div id="pupil1"></div>
-          <div id="eye"></div>
-          <div id="eye1"></div>
-          <div id="top0"></div>
-          <div id="top1"></div>
-          <div id="top2"></div>
-          <div id="top3"></div>
-          <div id="top4"></div>
-          <div id="st0"></div>
-          <div id="st1"></div>
-          <div id="st2"></div>
-          <div id="st3"></div>
-          <div id="st4"></div>
-          <div id="st5"></div>
-          <div id="an1"></div>
-          <div id="an2"></div>
-          <div id="an3"></div>
-          <div id="an4"></div>
-          <div id="an5"></div>
-          <div id="an6"></div>
-          <div id="an7"></div>
-          <div id="an8"></div>
-          <div id="an9"></div>
-          <div id="an10"></div>
-          <div id="an11"></div>
-          <div id="an12"></div>
-          <div id="an13"></div>
-          <div id="an14"></div>
-          <div id="an15"></div>
-          <div id="an16"></div>
-          <div id="an17"></div>
-          <div id="an18"></div>
-        </div>
-        <div id="shadow"></div>
-      </div>
-    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
         const events = {
             "cosplay event": "Cosplay Event.html",
@@ -145,6 +173,12 @@
             "game event": "Game Event.html",
             "photo walk": "Photo Walk.html"
         };
+
+        document.getElementById("search-input").addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                searchEvent();
+            }
+        });
 
         function searchEvent() {
             const searchInput = document.getElementById("search-input").value.toLowerCase().trim();

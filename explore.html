@@ -5,6 +5,7 @@
   <title>DihVents - Explore Events</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
   <header>
@@ -12,6 +13,7 @@
       <div class="header-container">
         <h1>DihVents</h1>
         <header class="search-header">
+         
           <input 
             type="text" 
             id="search-input" 
@@ -85,31 +87,71 @@
     </div>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="footer-container">
-      <div class="footer-about">
-        <h3>Our Purpose</h3>
-        <p>DihVents is your ultimate platform for discovering exciting events that match your interests. From music festivals to food fairs, we bring you closer to unforgettable experiences.</p>
-      </div>
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>cjrodas@student.apc.edu.ph</p>
-        <p>rmlitrero@student.apc.edu.ph</p>
-        <p>jydelantar@student.apc.edu.ph</p>
-        <p>gamartinez@student.apc.edu.ph</p>
-        <div class="footer-socials">
-          <a href="https://www.facebook.com/asiapacificcollege.edu/"><img src="facebook-icon.png" alt="Facebook"></a>
-          <a href="https://x.com/apcrams?lang=en"><img src="twitter-icon.png" alt="Twitter"></a>
-          <a href="https://www.instagram.com/apcrams/?hl=en"><img src="instagram-icon.png" alt="Instagram"></a>
+        <div class="footer-about">
+            <h3>Our Purpose</h3>
+            <p>
+                DihVents is your ultimate platform for discovering exciting events that match your interests. 
+                From music festivals to food fairs, we bring you closer to unforgettable experiences.
+            </p>
         </div>
-      </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>cjrodas@student.apc.edu.ph</p>
+            <p>rmlitrero@student.apc.edu.ph</p>
+            <p>jydelantar@student.apc.edu.ph</p>
+            <p>gamartinez@student.apc.edu.ph</p>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/asiapacificcollege.edu/"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="https://x.com/apcrams?lang=en"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/apcrams/?hl=en"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 DihVents. All rights reserved.</p>
+        <p>&copy; 2025 DihVents. All rights reserved.</p>
     </div>
-  </footer>
+</footer>
 
   <script>
+    // GSAP Animations
+    // Animate the navbar
+    gsap.from("nav", {
+      duration: 1,
+      y: -50,
+      opacity: 0,
+      ease: "power2.out"
+    });
+
+    // Animate the carousel cards
+    gsap.from(".carousel-card", {
+      duration: 1,
+      opacity: 0,
+      scale: 0.8,
+      stagger: 0.2,
+      ease: "elastic.out(1, 0.5)"
+    });
+
+    // Animate the carousel buttons
+    gsap.from(".carousel-button", {
+      duration: 1,
+      opacity: 0,
+      scale: 0.5,
+      delay: 0.5,
+      ease: "back.out(1.7)"
+    });
+
+    // Animate the footer
+    gsap.from("footer", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      delay: 1.5,
+      ease: "power2.out"
+    });
+
+    // Carousel Functionality
     const track = document.querySelector('.carousel-track');
     const prevButton = document.getElementById('prevButton');
     const nextButton = document.getElementById('nextButton');
@@ -194,4 +236,3 @@
   </script>
 </body>
 </html>
-``` 
