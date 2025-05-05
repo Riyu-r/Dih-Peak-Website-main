@@ -507,3 +507,159 @@ header, .banner, .button-container, .grid-container, footer {
   visibility: visible;
   opacity: 1;
 }
+
+/* Card Container Styling */
+.grid-container {
+    background-color: #f9f9f9; /* Light background for the card section */
+    padding: 40px;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for separation */
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box; /* Include padding and border in width calculations */
+}
+
+/* Remove unintended gaps between sections */
+header, .banner, .button-container, .grid-container, footer {
+    margin: 0;
+    padding: 0;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  visibility: hidden; /* Hidden by default */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+/* Show the loading screen */
+#loading-screen.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    overflow: visible; /* Allow navigation buttons to be visible outside the container */
+    padding: 0; /* Remove extra padding */
+    border: 5px transparent; /* Add a border around the entire slider */
+    border-radius: 25px; /* Optional: Add rounded corners */
+    background: #ffffff; /* Optional: Add a background color */
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.25, 1.5, 0.5, 1); /* Add a bouncy easing effect */
+    align-items: center; /* Ensure cards are vertically aligned */
+  }
+
+  .carousel-card {
+    min-width: 300px;
+    margin: 0 15px;
+    background: #1e1e1e;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease; /* Smooth transition for opacity */
+  }
+
+  .carousel-card.highlight {
+    transform: scale(1.1); /* Scale the entire card */
+    border: 5px solid #0062ff; /* Add a border to the highlighted card */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* Add a stronger shadow */
+    z-index: 1; /* Bring the highlighted card to the front */
+  }
+
+  .carousel-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease; /* Smooth transition for scaling */
+  }
+
+  .carousel-card.highlight img {
+    transform: scale(1); /* Keep the image size constrained within the card */
+  }
+
+  .carousel-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .carousel-card p {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 20px;
+  }
+
+  .carousel-card button {
+    background: #0062ff;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+
+  .carousel-card button:hover {
+    background: #fffb00;
+  }
+
+  .carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Push buttons to the edges */
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent buttons from blocking card interactions */
+  }
+
+  .carousel-button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    pointer-events: all; /* Allow buttons to be clickable */
+  }
+
+  .carousel-button:hover {
+    background: #0062ff;
+  }
+
+  .carousel-button:first-of-type {
+    left: -40px; /* Move the left button closer to the edge */
+    margin-left: 10px; /* Add some spacing from the edge */
+  }
+
+  .carousel-button:last-of-type {
+    right: -40px; /* Move the right button closer to the edge */
+    margin-right: 10px; /* Add some spacing from the edge */
+  }
+
+  .highlight {
+    border: 10px solid #00bfa6;
+  }
