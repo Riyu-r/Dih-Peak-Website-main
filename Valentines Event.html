@@ -3,29 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talent Show Event</title>
+    <title>DihVents</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="header-container">
-                <a href="home.html" style="text-decoration: none; color: inherit;">
-                    <h1>DihVents</h1>
-                </a>
+                <h1>DihVents</h1>
                 <header class="search-header">
                     <input 
                         type="text" 
-                        id="search-input" 
                         class="search-header__input" 
                         placeholder="Search here..." 
                         aria-label="Search"
                     />
-                    <button 
-                        class="search-header__button" 
-                        aria-label="Search Button" 
-                        onclick="searchEvent()"
-                    >
+                    <button class="search-header__button" aria-label="Search Button">
                         <svg class="search-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M10 2a8 8 0 105.293 14.707l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
                         </svg>
@@ -35,24 +28,25 @@
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="explore.html">Events</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <div class="banner">
-        <img src="Valentines Event.png" alt="Talent Show Event" class="banner-image" style="width: 100%; height: auto;">o;">
+        <img src="Valentines Event.png" alt="Valentine's Event" class="banner-image" style="width: 100%; height: auto;">
         <div class="banner-content">
-            <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 2.5em;">APC TALENT SHOW</h2>
+            <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 2.5em;">LoveUnlocked: APC Valentine’s Fest</h2>
             <p style="color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); font-size: 1.2em;">
-                Showcase your unique talents and amaze the audience!es and events!
+                Celebrate love, friendship, and all the feels—no date required!
             </p>
         </div>
     </div>
     <div class="event-details">
-        <h3 style="margin-top: 10px; font-family: 'Arial', sans-serif; color: #001f3f;">May 3, 2025</h3>5</h3>
-        <h1 style="font-size: 2em; font-weight: bold; font-family: 'Arial', sans-serif; color: #001f3f;">MicDrop: APC Talent Throwdown</h1></h1>
+        <h3 style="margin-top: 10px; font-family: 'Arial', sans-serif; color: #001f3f;">February 14, 2025</h3>
+        <h1 style="font-size: 2em; font-weight: bold; font-family: 'Arial', sans-serif; color: #001f3f;">LoveUnlocked: APC Valentine’s Fest</h1>
         <p style="margin-top: 10px; font-size: 1em; font-family: 'Arial', sans-serif; color: #001f3f;">
-            Think you’ve got the chops? Whether it’s singing, dancing, spoken word, or magic tricks — <strong>MicDrop</strong> is your stage. Join APC’s ultimate talent showdown and win prizes while impressing your peers and guest judges!
+            Feel the vibe at LoveUnlocked, APC’s very own Valentine fest! Whether you’re boo’d up or vibing solo, enjoy acoustic music, fun games, love-letter walls, and free sweets.
         </p>
         <div class="event-host" style="margin-top: 20px; font-family: 'Arial', sans-serif; color: #001f3f;">
             <p>By <strong>DihVents</strong></p>
@@ -61,107 +55,37 @@
     <div class="event-info" style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-family: 'Arial', sans-serif;">
         <div style="margin-bottom: 20px;">
             <h2 style="color: #6c4ed9; font-size: 1.5em; margin-bottom: 10px;">📅 Date & Time</h2>
-            <p style="color: #333; font-size: 1.1em;">May 3, 2025 | 3:00PM–8:00PM</p>PM</p>
+            <p style="color: #333; font-size: 1.1em;">February 14, 2025 | 4:00PM–9:00PM</p>
         </div>
         <div style="margin-bottom: 20px;">
             <h2 style="color: #5cb85c; font-size: 1.5em; margin-bottom: 10px;">📍 Venue</h2>
-            <p style="color: #333; font-size: 1.1em;">APC Auditorium</p>feteria Building)</p>
+            <p style="color: #333; font-size: 1.1em;">Rooftop Garden (Cafeteria Building)</p>
         </div>
         <div style="margin-bottom: 20px;">
-            <h2 style="color: #f0ad4e; font-size: 1.5em; margin-bottom: 10px;">👥 Who Can Join</h2>2>
-            <p style="color: #333; font-size: 1.1em;">Open to all APC students</p> friends!</p>
+            <h2 style="color: #f0ad4e; font-size: 1.5em; margin-bottom: 10px;">👥 Who Can Attend</h2>
+            <p style="color: #333; font-size: 1.1em;">Everyone — couples, singles, friends!</p>
         </div>
         <div style="margin-bottom: 20px;">
-            <h2 style="color: #0275d8; font-size: 1.5em; margin-bottom: 10px;">📝 Registration</h2>
-            <p style="color: #333; font-size: 1.1em;">Audition Now (Deadline: April 20)</p>
+            <h2 style="color: #0275d8; font-size: 1.5em; margin-bottom: 10px;">📝 Reservation</h2>
+            <p style="color: #333; font-size: 1.1em;">Reserve Spot (Limited slots!)</p>
         </div>
         <div style="margin-bottom: 20px;">
-            <h2 style="color: #d9534f; font-size: 1.5em; margin-bottom: 10px;">🏆 Prizes</h2>/h2>
+            <h2 style="color: #6c757d; font-size: 1.5em; margin-bottom: 10px;">🎉 Highlights</h2>
             <ul style="color: #333; font-size: 1.1em; line-height: 1.6;">
-                <li>₱5,000 + Certificate</li>
-                <li>₱3,000</li>acoustic jam</li>
-                <li>₱1,500</li>ses & choco giveaways</li>
-            </ul>li>Couple and friendship games</li>
-        </div>ul>
-        <div style="margin-bottom: 20px;">
-            <h2 style="color: #6c757d; font-size: 1.5em; margin-bottom: 10px;">📝 Notes</h2>
-            <ul style="color: #333; font-size: 1.1em; line-height: 1.6;">0px;">🎨 Dress Code</h2>
-                <li>Open auditions will be held the week before the event</li>
-                <li>Group or solo performances allowed</li>
+                <li>Blind note exchange</li>
+                <li>Open mic & acoustic jam</li>
+                <li>Rose surprises & choco giveaways</li>
+                <li>Couple and friendship games</li>
             </ul>
-        </div>2 style="color: #0275d8; font-size: 1.5em; margin-bottom: 10px;">📧 Contact</h2>
-        <div>p style="color: #333; font-size: 1.1em;">loveunlocked@dihvents.apc.edu.ph</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h2 style="color: #d9534f; font-size: 1.5em; margin-bottom: 10px;">🎨 Dress Code</h2>
+            <p style="color: #333; font-size: 1.1em;">Red, pink, or white</p>
+        </div>
+        <div>
             <h2 style="color: #0275d8; font-size: 1.5em; margin-bottom: 10px;">📧 Contact</h2>
-            <p style="color: #333; font-size: 1.1em;">micdrop@dihvents.apc.edu.ph</p>
+            <p style="color: #333; font-size: 1.1em;">loveunlocked@dihvents.apc.edu.ph</p>
         </div>
-    </div>nst events = {
-    <!-- Loading Animation -->"cosplay event": "Cosplay Event.html",
-    <div id="loading-screen">event": "Valentines Event.html",
-      <div id="ghost">Contest.html",
-        <div id="red">",
-          <div id="pupil"></div>
-          <div id="pupil1"></div>
-          <div id="eye"></div>
-          <div id="eye1"></div>
-          <div id="top0"></div>nction searchEvent() {
-          <div id="top1"></div>            const searchInput = document.getElementById("search-input").value.toLowerCase().trim();
-          <div id="top2"></div>
-          <div id="top3"></div>
-          <div id="top4"></div>ame, eventLink] of Object.entries(events)) {
-          <div id="st0"></div>   if (eventName.includes(searchInput)) {
-          <div id="st1"></div>         // Redirect to the event page if a match is found
-          <div id="st2"></div>                    window.location.href = eventLink;
-          <div id="st3"></div>;
-          <div id="st4"></div>
-          <div id="st5"></div>
-          <div id="an1"></div>            }
-          <div id="an2"></div>
-          <div id="an3"></div>
-          <div id="an4"></div>
-          <div id="an5"></div> you are looking for does not exist.");
-          <div id="an6"></div>
-          <div id="an7"></div>
-          <div id="an8"></div>
-          <div id="an9"></div>
-          <div id="an10"></div></html>          <div id="an11"></div>          <div id="an12"></div>          <div id="an13"></div>          <div id="an14"></div>          <div id="an15"></div>          <div id="an16"></div>          <div id="an17"></div>          <div id="an18"></div>
-        </div>
-        <div id="shadow"></div>
-      </div>
     </div>
-    <script>
-        const events = {
-            "cosplay event": "Cosplay Event.html",
-            "valentines event": "Valentines Event.html",
-            "spelling bee contest": "Spelling Bee Contest.html",
-            "talent show event": "Talent Show Event.html",
-            "game event": "Game Event.html",
-            "photo walk": "Photo Walk.html"
-        };
-
-        document.getElementById("search-input").addEventListener("keypress", function (event) {
-            if (event.key === "Enter") {
-                searchEvent();
-            }
-        });
-
-        function searchEvent() {
-            const searchInput = document.getElementById("search-input").value.toLowerCase().trim();
-            let found = false;
-
-            for (const [eventName, eventLink] of Object.entries(events)) {
-                if (eventName.includes(searchInput)) {
-                    // Redirect to the event page if a match is found
-                    window.location.href = eventLink;
-                    found = true;
-                    break;
-                }
-            }
-
-            if (!found) {
-                // Display an alert if no match is found
-                alert("Sorry, it seems that the event you are looking for does not exist.");
-            }
-        }
-    </script>
 </body>
 </html>
