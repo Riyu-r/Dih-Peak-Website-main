@@ -47,7 +47,7 @@ header {
 }
 
 .nav-links li a:hover {
-    color: #00bfa6;
+    color: #ffffff;
 }
 
 nav {
@@ -185,72 +185,6 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 1200px;
-    border-radius: 10px;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box; /* Include padding and border in width calculations */
-}
-
-.button-container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.button-container::-webkit-scrollbar-thumb {
-    background-color: #000000;
-    border-radius: 4px;
-}
-
-.button-container::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-}
-
-.button-container .button {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background-color: #007BFF;
-    border: 0;
-    border-radius: 8px;
-    border-bottom: 4px solid #0056b3;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-align: center;
-}
-
-.button-container .button:hover { 
-    filter: brightness(110%);          
-    transform: translateY(-2px);
-    border-bottom-width: 6px;
-}
-
-.button-container .button:active {
-    filter: brightness(90%);
-    transform: translateY(2px);
-    border-bottom-width: 2px;
-}
-
-@media (max-width: 768px) {
-    .button-container .button {
-        flex: 1 1 calc(50% - 20px);
-    }
-}
-
-@media (max-width: 480px) {
-    .button-container .button {
-        flex: 1 1 100%;
-    }
-}
 
 .about-section {
     padding: 50px 20px;
@@ -298,9 +232,8 @@ nav ul li a:hover {
     transition: all 0.3s ease;
 }
 
-.about-text .button:hover {
-    background-color: #0056b3;
-}
+
+
 
 .about-image {
     flex: 1 1 400px;
@@ -613,80 +546,70 @@ header, .banner, .button-container, .grid-container, footer {
         max-height: 300px; /* Reduce height for smaller screens */
     }
 }
-/* Dark Mode */
-body.dark-mode {
-    background-color: #121212; /* Dark background */
-    color: #f9f9f9; /* Light text color */
+
+/* Button Styling */
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent; /* Ensure the background is transparent */
+  padding: 10px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.6); /* Add a border for visibility */
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.5rem;
+  font-family: "Arial", sans-serif;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* Header in Dark Mode */
-body.dark-mode header {
-    background-color: #1a1a1a;
-    color: white;
+/* Actual Text */
+.actual-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+  z-index: 1;
+  white-space: nowrap; /* Prevent text wrapping */
+  pointer-events: none; /* Prevent interaction with this layer */
 }
 
-/* Navbar Links in Dark Mode */
-body.dark-mode .nav-links li a {
-    color: #f9f9f9;
+/* Hover Text */
+.hover-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #37FF8B; /* Glow color */
+  width: 0%;
+  overflow: hidden;
+  border-right: 6px solid #37FF8B;
+  transition: width 0.5s ease;
+  -webkit-text-stroke: 1px #37FF8B;
+  z-index: 2;
+  white-space: nowrap; /* Prevent text wrapping */
+  pointer-events: none; /* Prevent interaction with this layer */
 }
 
-body.dark-mode .nav-links li a:hover {
-    color: #00e6b8;
+/* Hover Effect */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px #37FF8B);
 }
 
-/* Search Bar in Dark Mode */
-body.dark-mode .search-header__input {
-    background-color: #333;
-    color: #f9f9f9;
-    border: 1px solid #525252;
+.button:hover {
+  background: rgba(255, 255, 255, 0.1); /* Slight background on hover */
+  border-color: #37FF8B; /* Change border color on hover */
 }
 
-body.dark-mode .search-header__input:focus {
-    background-color: #444;
-    color: white;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-}
 
-/* Footer in Dark Mode */
-body.dark-mode footer {
-    background-color: #1a1a1a;
-    color: white;
-}
-
-body.dark-mode .footer-links ul li a {
-    color: #f9f9f9;
-}
-
-body.dark-mode .footer-links ul li a:hover {
-    color: #00e6b8;
-}
-
-/* Cards in Dark Mode */
-body.dark-mode .card {
-    background-color: #1e1e1e;
-    color: #f9f9f9;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Carousel in Dark Mode */
-body.dark-mode .carousel-inner img {
-    filter: brightness(80%);
-}
-
-body.dark-mode .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 10px;
-}
-
-/* Buttons in Dark Mode */
-body.dark-mode .btn-outline-light {
-    color: white;
-    border-color: white;
-}
-
-body.dark-mode .btn-outline-light:hover {
-    background-color: white;
-    color: black;
-}
